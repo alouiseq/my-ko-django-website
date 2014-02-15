@@ -1,0 +1,37 @@
+{
+  "myname": "Alouise Quiatchon",
+  "job_title": "Junior Web Developer",
+  "img_width": "100%",
+  "img_height": "360em",
+  "copyright": " 2014 by Alouise Quiatchon.",
+  "info": [
+    {
+      "url": "index.html",
+      "name": "Home"
+    },
+    {
+      "url": "blog.html",
+      "name": "Blog"
+    },
+    {
+      "url": "portfolio.html",
+      "name": "Portfolio"
+    },
+    {
+      "url": "projects.html",
+      "name": "Projects"
+    },
+    { 
+      "url": "photos.html",
+      "name": "Photos"
+    },
+    {
+      "url": "videos.html",
+      "name": "Videos"
+    },
+    {
+      "url": "contacts.html",
+      "name": "Contact Me"
+    }
+  ]
+}  

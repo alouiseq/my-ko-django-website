@@ -1,0 +1,13 @@
+website = "Autobiography and portfolio website for projects and interests."
+
+django = "Learn to use this MVC framework to use Python as the server-side language to execute database queries."
+
+pscripts = "Small scripts to automate day to day tasks."
+
+remote_streamer = "Simple remote controlled video streamer that simplifies video viewing. Targets elders and non-tech savvy users. Video streaming is automated through a beagleboard device, website, monitor, and remote control. All streaming details are hidden from the user. User streams and watches a video by selecting a number on the remote."
+
+projects = ["Personal Website", "Django Basics", "Python Scripts", "Simple Remote Controlled Video Streamer"]
+
+// order matters here
+project_info = [website, django, pscripts, remote_streamer]
+

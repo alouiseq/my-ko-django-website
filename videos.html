@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Videos</title>
+
+    <!-- Boostrap core CSS -->
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css" />
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" type="text/css" href="styles/jumbotron-narrow.css" />
+    <link rel="stylesheet" type="text/css" href="styles/mini_styles.css" />
+
+  <!-- Lightbox -->
+  <link rel="stylesheet" href="/easybox/styles/default/easybox.min.css" type="text/css" media="screen" />
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="jsFiles/mustache.js/mustache.js"></script>
+    <script type="text/javascript" src="jsFiles/template.js"></script>
+    <script type="text/javascript" src="jsFiles/ecards.js"></script> 
+    <script type="text/javascript" src="textFiles/ecards.txt"></script> 
+
+  <!-- Easybox files -->
+  <!-- concatenated -->
+  <script type="text/javascript" src="/easybox/distrib.min.js"></script>
+
+  <!-- seperate files -->
+  <script type="text/javascript" src="/easybox/easybox.min.js"></script>
+  <script type="text/javascript" src="/easybox/handlers.min.js"></script>
+  <script type="text/javascript" src="/easybox/extras/autoload.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div id="me"></div>
+
+      <div class="header">
+        <h3 class="text-muted">Videos</h3>
+      </div>
+
+      <img class="main_image" src="images/family_both.jpg" alt="Quiatchon's & Maring's" height=270em width=100% />
+
+      <div id="msg" class="content">
+	<h1 id="holiday" class='title'>Holidays</h1>
+        <h2 id="greeting"></h3>
+        <h3 id="poem">
+          <p id="auth-title"></p>
+	  <audio controls>
+	    <source src="audio/twas_breastfeeder.mp3" type="audio/mpeg">
+	  </audio>
+          <p id="content"></p>
+        </h4>
+      </div><br/>
+      <div id="popup">
+        <figure id="qtag">
+          <figcaption class="tag"></figcaption>
+	  <a href="#qbox" title="Quiatchon's" class="lightbox" data-group="family">
+            <img class="fam" src="images/qfam1_elves.png" alt="Elves Dance" />
+          </a>
+          <figcaption id="qmems" class="members"></figcaption>
+        </figure> 
+        <br/><br/>
+        <figure id="mtag">
+          <figcaption class="tag"></figcaption>
+	  <a href="#mbox" title="Maring's" class="lightbox" data-group="family">
+            <img class="fam" src="images/msisters_carol.png" alt="Twerking" />
+          </a>
+          <figcaption id="mmems" class="members"></figcaption>
+        </figure> 
+        <br/><br/>
+        <figure id="mqtag">
+          <figcaption class="tag"></figcaption>
+	  <a href="#mqbox" title="Maring-Quiatchon's" class="lightbox" data-group="family">
+            <img class="fam" src="images/mqfam_penguins.png" alt="Penguins" />
+          </a>
+          <figcaption id="mqmems" class="members"></figcaption>
+        </figure> 
+      </div>
+
+      <div id="qbox" style="display:none;width:400px;height:380px"></div>
+      <div id="mbox" style="display:none;width:400px;height:340px"></div>
+      <div id="mqbox" style="display:none;width:300px;height:240px"></div>
+
+      <div class="footer">
+	<p id="copyright">Content &#169;</p>
+      </div>
+
+    </div> <!-- /container -->
+  </body>
+</html>

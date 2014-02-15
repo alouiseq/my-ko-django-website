@@ -1,0 +1,66 @@
+.content{
+  width: 80%;
+  margin: 0 auto;
+}
+
+pre{
+  word-break: normal;
+  word-wrap: normal;
+}
+
+/************************************************/
+/* Home page */
+/* Select or deselect data in Archives */
+.spotlight{
+  display: block;
+  color: #000;
+  font-size: 125%;
+}
+/************************************************/
+
+/************************************************/
+/* Projects page */
+/* Highlight first letter of each project */
+#project_list{
+  list-style-position: outside;
+  list-style-type: circle;
+}
+
+strong, .title_select{ color: red; }
+
+.descript{
+  color: green;
+}
+/************************************************/
+
+/************************************************/
+/* Games page */
+thead{
+  background-color: #c1c8c9;
+}
+.game_images{font-size: 1.5em;}
+/************************************************/
+
+/************************************************/
+/* E-Cards styles */
+ #msg, #popup{
+  text-align: center;
+}
+#holiday{color: red;}
+#greeting{color: green}
+#auth-title pre{color: #f1693c;}
+#content pre{color: blue}
+
+figcaption.tag{
+  font-size: 120%;
+  color: purple;
+}
+figcaption.members{
+  padding: 0 0 5px 0;
+  font-size: 90%;
+  color: #4dbcb5;
+}
+span{
+  font-size: 80%;
+}
+/************************************************/

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Fun Bits</title>
+    <meta name="description" content="Learning HTML, CSS, and JavaScript via tutorials." />
+    <meta name="keywords" content="HTML, CSS, JavaScript, tutorial, learn" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/styles.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="styles/printstyles.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="jsFiles/mustache.js/mustache.js"></script>
+    <script type="text/javascript" src="jsFiles/template.js"></script>
+    <script src="jsFiles/setElemColor.js"></script>
+    <script src="jsFiles/measures.js"></script>
+    <script src="jsFiles/redirect.js"></script>
+  </head>
+  <body id="fun">
+    <div class="bodywrapper">
+      <h2 id="me" class="myname">Alouise Quiatchon</h2><br/>
+      <img src="images/ironman1.jpg" alt="Iron Man" height=270em width=100% />
+      <div class="background">
+	<div class="tabswrap">
+        </div>
+      </div>
+      <div class="content">
+	<h1 class="title">Fun Bits</h1>
+	<h3 id="top">Fantasy Leagues:</h3>
+	<ul>
+	  <a class="fantasy" id="Y" href="http://football.fantasysports.yahoo.com/f1/965079">My Yahoo Fantasy League</a><br/><br/>
+	  <a class="fantasy" id="E" href="http://games.espn.go.com/ffl/leagueoffice?leagueId=1235292">My ESPN Fantasy League</a>
+	</ul>
+	</blockquote>
+	<h3 class="titles">Projects:</h3>
+	<ul>
+	  <li>Space Duel</li>
+	  <li>Personal website</li>
+	</ul><br/>
+	<q>Are <strong>you</strong> ready <i><b>for</b></i> some <em>football</em><small>?</small></q>
+	<p>5 favorite <b>NFL</b> football players playing today:</p>
+	<form>
+	<input type="button" onclick="setElemColor('players')" value="Change text color below" id="button1" />
+	</form>
+	<ol id="players" start="0">
+	  <li>Peyton Manning</li>
+	  <li>Darren McFadden (aka DMac)</li>
+	  <li>Ed Reed</li>
+	  <li>Adrian Peterson</li>
+	  <li>Josh Gordon (aka Megatron)</li>
+	<figure>
+	  <img src="images/raiders.gif" alt="Oakland Raiders Helmet" title="Go Raiders!" height="42" width="42" />
+	  <figcaption>Oakland Raiders</figcaption>
+	</figure>
+	</ol>
+	<div>
+	<h3 class="titles">Videos:</h3>
+	<blockquote><a href="http://www.youtube.com/watch?v=2Tvy_Pbe5NA" title="Description of a geek vs. nerd in the form of a rap battle (youtube)" target="_blank">Geek vs. Nerd (external)</a></blockquote>
+	</div>
+	<h3 class="titles">Measurements:</h3>
+	<input type="text" id="start" /> &nbsp;&nbsp; to &nbsp;&nbsp; <input type="text" id="result" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<button onclick="calculate()">Calculate</button><br/> &nbsp;&nbsp;&nbsp;
+	<select id="from"> 
+	  <option>ounces</option>
+	  <option>quarts</option>
+	  <option>lbs</option>
+	  <option>Louie's thigh</option>
+	  <option>Mer's entire body</option>
+	</select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<select id="to"> 
+	  <option>ounces</option>
+	  <option>quarts</option>
+	  <option>lbs</option>
+	  <option>Louie's thigh</option>
+	  <option>Mer's entire body</option>
+	</select>
+
+
+	<br/><br/><br/><br/><br/><br/><br/>
+	<a href="#top">Back to the Top</a>
+      </div><br/>
+      <footer>
+	<p>Content &#169; 2013 by Alouise Quiatchon.</p>
+      </footer>
+    </div>
+  </body>
+</html>

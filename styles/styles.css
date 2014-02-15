@@ -1,0 +1,139 @@
+html{ background-color: #000; }
+
+body{
+  float: left;
+  position: relative;
+  left: 50%;
+}
+
+body > div{
+  margin: 0.5cm 0.8cm 0 0.5cm;
+  font-family: arial;
+  border: 1px ridge black;
+  background-color: #FFF;
+  max-width: 1000px;
+  float: left;
+  position: relative;
+  left: -50%;
+  overflow: hidden;
+}
+
+.background{ 
+  overflow: hidden;
+  background-color: black; 
+}
+
+.tabswrap{
+  float: left;
+  padding-bottom: 0em;
+  position: relative;
+  left: 50%;
+}
+
+.tabs{
+  list-style-type: none;
+  overflow: hidden;   /*resolve parent's 0 height due to floated children*/
+  position: relative;
+  left: -50%;
+}
+
+.tabs li{
+  float: left;
+  margin: 0 1em 0 0;
+  padding: 0 0.5em;
+  color: #FFF;
+}
+
+.tabs li a{
+  color: #FFF;
+  text-decoration: none;
+}
+
+.myname, .leftside, .rightside{
+  padding: 1em;
+}
+
+#me{ 
+  padding-bottom: 0px;
+  font-size: 2em; 
+  font-family: Times New Roman;
+}
+
+#archives{
+  font-size: medium;
+  margin-left: 2em;
+}
+
+.leftside{
+  width: 20%;
+  clear: both;
+  float: left;
+}
+
+.rightside{
+  width: 70%;
+  float: right;
+}
+
+#activities{
+  padding-bottom: 4em;
+}
+
+.title{ 
+  clear: both;
+  font-variant: small-caps;
+}
+
+.content{
+  width: 50%;
+  margin: 0 auto;
+}
+
+#project_list{
+  list-style-position: outside;
+  list-style-type: circle;
+}
+
+strong{ color: red; }
+
+footer{
+  width: 100%;
+  clear: both;
+  border-top: 1px solid #585858;
+  padding: 1em;
+  background-color: #E6E6E6;
+}
+
+footer > p{
+  font-size: 12px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.descript{
+  color: green;
+}
+
+/* E-Cards styles */
+ #msg, #popup{
+  text-align: center;
+}
+#holiday{color: red;}
+#greeting{color: green}
+#auth-title{color: purple;}
+#content{color: blue}
+
+figcaption.tag{
+  font-size: 120%;
+  color: purple;
+}
+figcaption.members{
+  padding: 0 0 5px 0;
+  font-size: 90%;
+  color: red;
+}
+span{
+  font-size: 80%;
+}
+/* Ends e-Cards styles */

@@ -1,0 +1,97 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+
+/* Padding below the footer and lighter body text */
+body {
+  padding-bottom: 40px;
+  color: #5a5a5a;
+}
+
+
+/* GRIDS CONTENT
+-------------------------------------------------- */
+
+/* Pad the edges of the mobile views a bit */
+.grids {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Center align the text within the three columns below the carousel */
+.grids .col-lg-4, .col-xs-4 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.grids h2 {
+  font-weight: normal;
+}
+
+/* For desktop monitors */
+@media (min-width: 1200px) {
+  .grids .col-lg-4.col-left {
+    padding-left: 200px;
+    padding-right: 0px;
+  }
+
+  .col-lg-4.col-left p.plain, p.animate {
+    left: 195px;
+    right: 0px;
+    bottom: 0%;
+  }
+
+  .grids .col-lg-4.col-right {
+    padding-right: 200px;
+    padding-left: 0px;
+  }
+
+  .col-lg-4.col-right p {
+    right: 195px;
+    left: 0px;
+    bottom: 0%;
+  }
+}
+
+.grids .col-xs-4 {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.grids .col-lg-4 p {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* Texts */
+p {
+  color: white;
+  position: absolute;
+  z-index: 1;
+}
+
+.col-xs-4 p.plain, p.animate {
+  left: 5%;
+  right: 5%;
+  bottom: 0%;
+}
+
+.col-xs-4 p.animate {
+  top: 40%;
+  font-size: xx-large;
+}
+
+/* Images */
+img {
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+  /* Remove the edge padding needed for mobile */
+  .grids {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

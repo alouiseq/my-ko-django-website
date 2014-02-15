@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Blog</title>
+    
+    <!-- CSS files -->
+    <!-- Boostrap core CSS -->
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css" />
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" type="text/css" href="styles/jumbotron-narrow.css" />
+    <link rel="stylesheet" type="text/css" href="styles/mini_styles.css" />
+
+    <!-- JS files -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="jsFiles/mustache.js/mustache.js"></script>
+    <script src="jsFiles/template.js"></script>
+    <script src="jsFiles/blog.js"></script>
+    <script src="textFiles/blog.txt"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div id="me"></div>
+
+      <div class="header">
+        <h3 class="text-muted">Blog</h3>
+      </div>
+
+      <img class="main_image" src="images/alyssa_me.jpg" alt="Alyssa & me" height=270em width=100% />
+
+      <div class="row blog">
+	<div class="col-sm-4">
+	  <h4 id="archives" class="titles"><em>Archives</em></h4>
+	  <ul id="dates"></ul>
+	</div>
+
+	<div id="blog" class="col-sm-8">
+	  <h4 class="titles">What's going on?</h4>
+	    <p id="posts"></p>
+	  <div>
+	    <h4 class="titles">Tools/Activities</h4>
+	      <p id="activities"></p>
+	  </div>
+	</div>
+      </div>
+
+      <div class="footer">
+	<p id="copyright">Content &#169;</p>
+      </div>
+    </div> <!-- /container -->
+  </body>
+</html>
