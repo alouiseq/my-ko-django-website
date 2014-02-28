@@ -1,47 +1,55 @@
-<html lang="en-US">
+<!doctype html>
+<html>
   <head>
-    <meta charset="utf-8"></meta>
+    <meta charset="utf-8" />
     <title>Contact Me</title>
 
-    <!-- Boostrap core CSS -->
+    <!-- CSS files -->
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css" />
-
-    <!-- Custom styles for this template -->
-    <link rel="stylesheet" type="text/css" href="styles/jumbotron-narrow.css" />
-
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script type="text/javascript" src="jsFiles/mustache.js/mustache.js"></script>
-    <script type="text/javascript" src="jsFiles/template.js"></script>
-    <script type="text/javascript" src="jsFiles/contacts.js"></script>
-    <script type="text/javascript" src="textFiles/autobiography.txt"></script>
+    <link rel="stylesheet" href="/easybox/styles/default/easybox.min.css" type="text/css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
   </head>
 
   <body>
-    <div class="container">
-      <div id="me"></div>
-
-      <div class="header">
-	<h3 class="text-muted">Contact Me</h3>
+    <div class="masthead">
+      <div class="container">
+        <nav id="Contact" class="blog-nav"></nav>
       </div>
+    </div>
 
-      <img class="main_image" src="images/myfamily2.jpg" alt="My family" height=270em width=100% />
-
-      <div class="content"><br/>
-	<p id="autobio"></p><br/>
-	<p id="msg"></p>
-	
-        <form>
+    <div class="container contact">
+      <div class="head-msg">
+	<h1>Contact Me</h1>
+        Under Construction
+      </div>
+      <div class="main-msg">
+	<h3 id="msg"></h3>
+      </div>
+      <div class="form-msg">
+	<form>
 	Name:<br/><input type="text" /><br/><br/>
 	Email:<br/> <input type="text" /><br/><br/>
-	Comment:<br/> <textarea rows="10" cols="20"></textarea><br/><br/>
-	<input type="submit" value="Submit >>" />
+	Comment:<br/> <textarea></textarea><br/><br/>
+	<input type="submit" value="Submit" />
 	</form>
-      </div> <!-- content -->
-
-      <div class="footer">
-	<p id="copyright">Content &#169;</p>
       </div>
+    </div>   <!-- /container -->
 
-    </div> <!-- /container -->
+    <div class="footer">
+      <div class="blog-nav"></div>
+      <p id="copyright">&#169;</p>
+    </div>
+
+    <!-- JS files -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="jsFiles/mustache.js/mustache.js"></script>
+    <script type="text/javascript" src="/easybox/distrib.min.js"></script>
+    <script type="text/javascript" src="/easybox/easybox.min.js"></script>
+    <script type="text/javascript" src="/easybox/handlers.min.js"></script>
+    <script type="text/javascript" src="/easybox/extras/autoload.min.js"></script>
+
+    <script src="jsFiles/template.js"></script>
+    <script src="textFiles/contacts.txt"></script>
+    <script src="jsFiles/contacts.js"></script>
   </body>
 </html>

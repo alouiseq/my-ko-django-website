@@ -6,6 +6,7 @@ function retrieveBlogs(date_re){
         datepost_re = /(.+?):\s*(.+)/g,
         date_matches = [],
         post_matches = [],
+        topic = current.topic,
         match = datepost_re.exec(current.post);
 
     while(match != null){
@@ -15,17 +16,18 @@ function retrieveBlogs(date_re){
     }
 
     if(!date_re){
-      return [date_matches, post_matches, view];
+      return [date_matches, post_matches, view, topic];
     }
     data[view] = {
       dates: date_matches,
-      posts : post_matches
+      posts: post_matches,
+      topic: topic
     }
 
     // Add dates into Archives section
     matches = date_matches[0].match(date_re);
     var long_date = matches[1] + " " + matches[3];
-    $("ul#dates").append("<li><a id='" + view + "' href='#dates'>" + long_date + "</a></li>");
+    $("ol#dates").append("<li><a id='" + view + "' href='#'>" + long_date + "</a></li>");
   }
   return data;
 }
@@ -33,62 +35,72 @@ function retrieveBlogs(date_re){
 function outputBlogs(options){
   var dates = options.date_matches || options.data[options.val].dates;
   var posts = options.post_matches || options.data[options.val].posts;
+  var topic = options.topic || options.data[options.val].topic;
   var id = options.val || Object.keys(blogs)[0];
 
-  $("#posts").html("<pre></pre>");
-  // extract a subset of the date
-  for(var i = dates.length - 1; i >= 0; i--){
-    var matches = dates[i].match(options.date_re),
-        short_date = matches[i].substr(0, 3) + " " + matches[2];
+  var blog = $(".blog-main"),
+      blog_title = "<h4 class='blog-post-title'></h4>",
+      blog_date = "<p class='blog-post-meta'></p>",
+      blog_post = "<p class='posts'></p>",
+      counter = 0;    // track new id for each blog post
 
-    $("#posts").find("pre").append("<strong><em>Updated: " + short_date + "</em></strong><br />" + posts[i] + "<br/><br/>");
+  blog.children().remove();
+
+  for(var i = dates.length - 1; i >= 0; i--){
+    var blog_div = "<div id='" + counter + "' class='blog-post'></div>";
+    blog.append(blog_div);
+    var post = $("#" + counter++);
+    post.append(blog_title);
+    $(".blog-post-title:last").text(topic);
+    post.append(blog_date);
+    $(".blog-post-meta:last").text(dates[i]);
+    post.append(blog_post);
+    $(".posts:last").html(posts[i]);
   }
-    
-  $("#activities").html("<pre>" + blogs[id].activity + "</pre>");
 }
 
-$(document).ready(function(){
-  var date_re = /(\w+)\s*(\d+),\s*(\d*)/;
+// Start here
+var date_re = /(\w+)\s*(\d+),\s*(\d*)/;
 
-  // default page view
-  var dates_posts = retrieveBlogs(null);   // only retrieves latest blog
-  var newest = dates_posts[2];
+// default page view
+var dates_posts = retrieveBlogs(null);   // only retrieves latest blog
+var newest = dates_posts[2];
 
-  var options = {
-    date_matches: dates_posts[0],
-    post_matches: dates_posts[1],
-    date_re: date_re
-  }
+var options = {
+  date_matches: dates_posts[0],
+  post_matches: dates_posts[1],
+  topic: dates_posts[3],
+  date_re: date_re
+}
 
-  outputBlogs(options);   // displays blogs
+outputBlogs(options);   // display latest blog
 
-  // selected view
-  var data = retrieveBlogs(date_re);   // retrieves ALL blogs
+// selected view
+var data = retrieveBlogs(date_re);   // retrieves ALL blogs
 
-  // the default (latest) date is highlighted
-  $("#"+newest).addClass("spotlight");
+// the default (latest) date is highlighted
+$("#"+newest).addClass("spotlight");
 
-  // view blog posts based on month and year date
-  $("a").click(function(){
-    var val = $(this).attr("id");
+// view blog posts based on month and year date
+$("a").click(function(){
+  var val = $(this).attr("id");
 
-    if(val != undefined){
-      for(date_id in blogs){
-	if(val == date_id){
-	  $("#"+val).addClass("spotlight");
-	}
-	else{
-	  $("#"+date_id).removeClass("spotlight");
-	}
+  if(val != undefined){
+    for(date_id in blogs){
+      if(val == date_id){
+	$("#"+val).addClass("spotlight");
       }
-
-      var opts = {
-        data: data,
-        val: val,
-        date_re: date_re
+      else{
+	$("#"+date_id).removeClass("spotlight");
       }
-
-      outputBlogs(opts);   // displays blogs
     }
-  });
+
+    var opts = {
+      data: data,
+      val: val,
+      date_re: date_re
+    }
+
+    outputBlogs(opts);   // display blogs
+  }
 });

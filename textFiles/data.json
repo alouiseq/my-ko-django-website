@@ -1,9 +1,10 @@
 {
   "myname": "Alouise Quiatchon",
-  "job_title": "Junior Web Developer",
+  "description": "Web Developer",
+  "brand": "AQ",
   "img_width": "100%",
   "img_height": "360em",
-  "copyright": " 2014 by Alouise Quiatchon.",
+  "copyright": " 2014 Alouise Quiatchon.",
   "info": [
     {
       "url": "index.html",
@@ -21,17 +22,33 @@
       "url": "projects.html",
       "name": "Projects"
     },
-    { 
-      "url": "photos.html",
-      "name": "Photos"
-    },
-    {
-      "url": "videos.html",
-      "name": "Videos"
-    },
     {
       "url": "contacts.html",
       "name": "Contact Me"
+    }
+  ],
+  "latest_work": [
+    {
+      "title": "Personal_Website",
+      "image": "images/mysite.png"
+    }
+  ],
+  "prior_work": [
+    {
+      "title": "Data_Miner",
+      "image": "images/tool.png"
+    },
+    {
+      "title": "Space_Duel_2D",
+      "image": "images/space_duel_2.png"
+    },
+    {
+      "title": "Status_Tool",
+      "image": "images/statustool.png"
+    },
+    {
+      "title": "Design_Tracker",
+      "image": "images/dtracker.png"
     }
   ]
 }  

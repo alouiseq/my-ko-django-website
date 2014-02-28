@@ -1,13 +1,11 @@
-website = "Autobiography and portfolio website for projects and interests."
+mysite = {
+  title: "Personal website.",
+  meta: "First published website.",
+  synopsis: "A site powered by Bootstrap 3 and written in HTML, CSS, jQuery, and mustache.js is a simple but elegant presentation of the owner's web development experience."
+}
 
-django = "Learn to use this MVC framework to use Python as the server-side language to execute database queries."
-
-pscripts = "Small scripts to automate day to day tasks."
-
-remote_streamer = "Simple remote controlled video streamer that simplifies video viewing. Targets elders and non-tech savvy users. Video streaming is automated through a beagleboard device, website, monitor, and remote control. All streaming details are hidden from the user. User streams and watches a video by selecting a number on the remote."
-
-projects = ["Personal Website", "Django Basics", "Python Scripts", "Simple Remote Controlled Video Streamer"]
-
-// order matters here
-project_info = [website, django, pscripts, remote_streamer]
-
+familySite = {
+  title: "Family website.",
+  meta: "Under construction.",
+  synopsis: "A website designed and developed to display beautiful family photos and videos. Media files are stored in a Postgre database and accessed through Django." 
+}

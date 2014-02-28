@@ -1,31 +1,36 @@
-$(document).ready(function(){
-  // use mustache.js to create template syntax
-  $.getJSON('textFiles/data.json', function(data){
-    // page tabs
-    var template = "<ul class='nav nav-pills pull-right'>{{#info}}<li><a href={{url}}>{{name}}</a></li>{{/info}}</ul>";
-    var html = Mustache.render(template, data);
-    $("div.header").prepend(html);
+$.getJSON('textFiles/data.json', function(data){
+  /************* GLOBAL *****************/
+  // page tabs
+  var template = "{{#info}}<a class='blog-nav-item' href={{url}}>{{name}}</a>{{/info}}";
+  var html = Mustache.render(template, data);
+  $(".blog-nav").html(html);
 
-    // activate page tab after load
-    var tabname = $("h3.text-muted").text();    
-    $(".header a:contains("+tabname+")").parent().attr("class", "active");
+  // activate page tab after load
+  var tabname = $(".blog-nav").attr("id");
+  $("nav.blog-nav a:contains("+tabname+")").attr("class", "blog-nav-item active");
 
-    // my name
-    var myname_template = "<h2>{{myname}}</h2><h4>{{job_title}}</h4><br/>";
-    var myname_html = Mustache.render(myname_template, data);
-    $("#me").html(myname_html);
+  // Add copyright info at the footer
+  var myRights = "{{copyright}}";
+  var myRights_html = Mustache.render(myRights, data);
+  $("#copyright").append(myRights_html);
 
-    // image size
-    var width = "{{img_width}}";
-    var height = "{{img_height}}";
-    var width_html = Mustache.render(width, data);
-    var height_html = Mustache.render(height, data);
-    $(".main_image").attr("width", width_html);
-    $(".main_image").attr("height", height_html);
 
-    // Add copyright info at the footer
-    var myRights = "{{copyright}}";
-    var myRights_html = Mustache.render(myRights, data);
-    $("#copyright").append(myRights_html);
-  });
+  /************* HOME ******************/
+  // my name as a header 
+  var myname_template = "<h2>{{myname}}</h2>";
+  var myname_html = Mustache.render(myname_template, data);
+  $("#myname").html(myname_html);
+
+
+  /************* PORTFOLIO ******************/
+  if(tabname === "Portfolio") {
+    var easybox_tmp = "{{#prior_work}}<img src={{image}} alt={{title}} width='100px' height='100px' />{{/prior_work}}";
+    var prior_work_html = Mustache.render(easybox_tmp, data);
+    $(".col-lg-12").append(prior_work_html);
+
+    // launching easybox
+    $("img").on("click", function(){
+      $.easybox([{url: $(this).attr("src"), caption: $(this).attr("alt")}]);
+    });
+  }
 });

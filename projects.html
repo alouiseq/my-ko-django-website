@@ -1,41 +1,70 @@
-<html lang="en-US">
+<!doctype html>
+<html>
   <head>
-    <meta charset="utf-8"></meta>
+    <meta charset="utf-8" />
     <title>Projects</title>
 
-    <!-- Boostrap core CSS -->
+    <!-- CSS files -->
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css" />
-
-    <!-- Custom styles for this template -->
-    <link rel="stylesheet" type="text/css" href="styles/jumbotron-narrow.css" />
-    <link rel="stylesheet" type="text/css" href="styles/mini_styles.css" />
-
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script type="text/javascript" src="jsFiles/mustache.js/mustache.js"></script>
-    <script type="text/javascript" src="jsFiles/template.js"></script>
-    <script type="text/javascript" src="jsFiles/projects.js"></script>
-    <script type="text/javascript" src="textFiles/projects.txt"></script>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
   </head>
+
   <body>
-    <div class="container">
-      <div id="me"></div>
+    <div class="masthead">
+      <div class="container">
+        <nav id="Projects" class="blog-nav"></nav>
+      </div>
+    </div>
 
-      <div class="header">
-        <h3 class="text-muted">Projects</h3>
+    <div class="container proj">
+      <div class="row hr-min">
+        <div id="work">
+	  <h1>Latest Work</h1>
+        </div>
       </div>
 
-      <img class="main_image" src="images/mer&i_anagram.jpg" alt="Alyssa & me" height=270em width=100% />
-
-      <div class="content"><br/><br/>
-	<ul id="project_list">
-	</ul>
-      </div><br/>
-
-      <div class="footer">
-	<p id="copyright">Content &#169;</p>
+      <div class="row featurette">
+	<div id="mysite" class="col-md-7">
+          <h2 class="featurette-heading">
+            <span class="text-muted"></span>
+          </h2>
+          <p class="lead">Testing in this area.
+          </p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive" src="images/mysite.png" alt="My website" />
+        </div>
       </div>
 
-    </div> <!-- /container -->
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive" src="http://placehold.it/500x500" alt="My family's website" />
+        </div>
+	<div id="familySite" class="col-md-7">
+          <h2 class="featurette-heading">
+            <span class="text-muted"></span>
+          </h2>
+          <p class="lead">Testing in this area.
+          </p>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+    </div>   <!-- /container -->
+
+    <div class="footer">
+      <div class="blog-nav"></div>
+      <p id="copyright">&#169;</p>
+    </div>
+
+    <!-- JS files -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="textFiles/projects.txt"></script>
+    <script type="text/javascript" src="jsFiles/projects.js"></script>
+    <script src="jsFiles/mustache.js/mustache.js"></script>
+    <script src="jsFiles/template.js"></script>
   </body>
 </html>
-

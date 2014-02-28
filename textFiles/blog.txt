@@ -1,14 +1,14 @@
 blogs = {
   "feb2014": {
-    post: "February 8, 2014: I'm currently going through my code to optimize it. I'm removing excess div tags and placing repeated code into functions. I'm also thinking about redesigning my web pages.",
-    activity: "Web tools for site: HTML, CSS, JavaScript, jQuery, mustache.js, Twitter Bootstrap"
+    topic: "What's going on?",
+    post: "February 8, 2014: I'm currently going through my code to optimize it. I'm removing excess div tags and placing repeated code into functions. I'm also thinking about redesigning my web pages. <span style='color:green;'>(tools: HTML, CSS, JavaScript, jQuery, mustache.js, Twitter Bootstrap)</span>\nFebruary 19, 2014: I just learned about CSS positioning and have applied it to creating a sticky footer. I'm also currently learning about Heroku to be able to host my website using Django.\nFebruary 25, 2014: I've completed my very first website using static pages! I'm now working on moving my website into Django (Python web framework) for dynamic page scalability."
   },
   "jan2014": {
-    post: "January 10, 2014: I'm looking to improve the overall look of my website through Twitter Bootstrap. It really does save a ton of time!\n\nJanuary 20, 2014: Next on my plate is to go through the Django tutorial to be able to implement a Sports page and Photo Album page that require a database and a back-end engine to communicate with the database. \n\nIn fact, all data that are currently stored in text files would be transferred to the database.",
-    activity: "Web tools for site: HTML, CSS, JavaScript, jQuery, mustache.js, <span style='color:red;font-size:1em'>Twitter Bootstrap</span>\n\nGo through Django tutorial to implement the Django framework to utilize Python and a specific database (currently sqlite since this is Django's default).",
+    topic: "What's going on?",
+    post: "January 10, 2014: I'm looking to improve the overall look of my website through Twitter Bootstrap. It really does save a ton of time! <span style='color:green;'>(tools: HTML, CSS, JavaScript, jQuery, mustache.js, <span style='color:red;font-size:1em'>Twitter Bootstrap</span>)</span><br/><br/>Go through Django tutorial to implement the Django framework to utilize Python and a specific database (currently sqlite since this is Django's default).\nJanuary 20, 2014: Next on my plate is to go through the Django tutorial to be able to implement a Sports page and Photo Album page that require a database and a back-end engine to communicate with the database.<br/><br/>In fact, all data that are currently stored in text files would be transferred to the database."
   },
   "dec2013": {
-    post: "December 01, 2013: I am currently building this website as a portfolio for projects and tasks I have worked on, as well as any future endeavors.\n\nDecember 18, 2013: In light of the holiday spirits this year, I have created several  e-card videos for my families to enjoy via <a href='http://jibjab.com' target='_blank'>jibjab.com.</a>",
-    activity: "Web tools for site: HTML, CSS, JavaScript, jQuery, mustache.js",
+    topic: "What's going on?",
+    post: "December 01, 2013: I am currently building this website as a portfolio for projects and tasks I have worked on, as well as any future endeavors.\nDecember 18, 2013: In light of the holiday spirits this year, I have created several  e-card videos for my families to enjoy via <a href='http://jibjab.com' target='_blank'>jibjab.com.</a> <span style='color:green;'>(tools: HTML, CSS, JavaScript, jQuery, mustache.js)</span>"
   }
 }
